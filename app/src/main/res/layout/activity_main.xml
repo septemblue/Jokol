@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> homepage
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".MainActivity">
 
     <TextView
@@ -16,3 +21,171 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    android:background="#edcdc0"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/menuAtas"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joki Online"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_layout"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trendingGameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/menuAtas"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#f0e8d5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Trending game"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/trendingGame"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/menuAtas"
+            android:padding="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/trendingGameLayout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#f0e8d5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="185dp"
+            android:layout_height="170dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mobileGames"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_baseline_phone_android_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Mobile Games"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="185dp"
+            android:layout_height="170dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pcGames"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_baseline_computer_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pc Games"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/other"
+        android:padding="20dp"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <RelativeLayout
+        android:id="@+id/bottomNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f0e8d5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/homeBtn"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_baseline_home_24"
+            android:minWidth="0dp" />
+
+        <TextView
+            android:id="@+id/transactionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/profileBtn"
+            android:layout_toRightOf="@id/homeBtn"
+            android:background="@drawable/ic_baseline_shopping_cart_24" />
+
+        <TextView
+            android:id="@+id/profileBtn"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_baseline_account_circle_24"
+            android:minWidth="0dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+>>>>>>> homepage
