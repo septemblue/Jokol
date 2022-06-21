@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0e8d5"
+    tools:context=".Profile">
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:padding="-20dp"
+        android:hint="Username"
+        android:gravity="center_horizontal"
+        android:background="@drawable/edittext"
+        app:layout_constraintTop_toBottomOf="@id/userImage"/>
+
+    <TextView
+        android:id="@+id/jadiPenjoki"
+        android:text="Jadi penjoki"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/logoEmail"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintEnd_toStartOf="@+id/registerEmail"
+        app:layout_constraintTop_toBottomOf="@id/jadiPenjoki" />
+
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jadiPenjoki"
+        android:hint="myExample@example.com"/>
+
+    <ImageView
+        android:id="@+id/logoPassword"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_lock_24"
+        app:layout_constraintEnd_toStartOf="@+id/registerPassword"
+        app:layout_constraintTop_toBottomOf="@id/registerEmail" />
+
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerEmail"
+        android:hint="Password"/>
+
+    <ImageView
+        android:id="@+id/logoPhone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_phone_android_24"
+        app:layout_constraintEnd_toStartOf="@+id/registerPhone"
+        app:layout_constraintTop_toBottomOf="@id/registerPassword" />
+
+    <EditText
+        android:id="@+id/registerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerPassword"
+        android:hint="Phone number"/>
+
+    <Button
+        android:id="@+id/ubahData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        app:layout_constraintTop_toBottomOf="@id/registerPhone"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Ubah data" />
+
+    <Button
+        android:id="@+id/hapusAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        app:layout_constraintTop_toBottomOf="@id/ubahData"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Hapus akun" />
+
+
+    <RelativeLayout
+        android:id="@+id/bottomNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#e4f7cd"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/homeBtn"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:background="@drawable/ic_baseline_home_24"
+            android:minWidth="0dp" />
+
+        <TextView
+            android:id="@+id/transactionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_toLeftOf="@id/profileBtn"
+            android:layout_toRightOf="@id/homeBtn"
+            android:background="@drawable/ic_baseline_shopping_cart_24" />
+
+        <TextView
+            android:id="@+id/profileBtn"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_baseline_account_circle_24"
+            android:minWidth="0dp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
