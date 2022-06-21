@@ -3,13 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/JOKOL/app/src/main/res/drawable/edittext.xml" value="0.158" />
-        <entry key="..\:/JOKOL/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1895" />
-        <entry key="..\:/JOKOL/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1895" />
-        <entry key="..\:/JOKOL/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.1895" />
-        <entry key="..\:/JOKOL/app/src/main/res/drawable/search_layout.xml" value="0.189" />
-        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Maevlava/AndroidStudioProjects/JokiOnline/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
       </map>
     </option>
   </component>

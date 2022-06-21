@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import septemblue.example.jokionline.R;
+
 public class Login extends AppCompatActivity {
 
     @Override
