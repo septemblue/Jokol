@@ -23,6 +23,15 @@
         android:theme="@style/Theme.JOKOL"
         tools:targetApi="31">
         <activity
+            android:name=".metodePembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".jadiPenjoki"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
