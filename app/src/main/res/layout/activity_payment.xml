@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edcdc0"
+    tools:context=".Payment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#f0e8d5"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/jumlahText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Jumlah Harga : "
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/jumlahHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/jumlahText"
+            android:text="Rp. -"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/virtualNumberPembayaran"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jumlahText"
+            android:background="@drawable/metodepembayaran"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/virtualNumberTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. Virtual Account"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/virtualNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456789123456789"
+                android:textColor="#fc0303"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/virtualNumberPembayaran"
+            android:textSize="13dp"
+            android:text="ATM Pilih Bayar/Beli.\nPilih Lainnya > Lainnya > Multi Payment.
+Masukkan kode perusahaan xxxx8 dan pilih Benar.
+Masukkan kode bayar 896 08XXXXXXXX dan pilih Benar.\nPeriksa kembali informasi yang tertera di layar. Pastikan Merchant adalah JOKOL, total tagihan sudah benar, dan username Anda {username}. Jika sudah benar, tekan angka 1 (satu) dan pilih Ya.
+Periksa layar konfirmasi dan pilih Ya.\n\nE-Banking\n
+1. Pilih Bayar > Multi Payment.\n
+2. Pilih dari Rekening: Rekening Anda dan pilih Penyedia Jasa: JOKOL > Lanjutkan.\n
+3. Masukkan kode bayar 896 08XXXXXXXX > Lanjutkan.\n
+4. Periksa kembali informasi yang tertera di layar. Pastikan Merchant adalah JOKOL, total tagihan sudah benar, dan username Anda {username}. Jika sudah benar, centang tagihan > Lanjutkan.\n
+5. Masukkan PIN token Anda > Kirim.\n\n
+M-Banking\n
+1. Log in ke M-Banking Mandiri Anda. Pilih Bayar > pilih e Commerce.\n
+2. Pilih penyedia layanan (Contoh: JOKOL), lalu masukkan no. Virtual Account.\n
+3. Periksa kembali informasi yang tertera di layar. Pastikan Merchant adalah JOKOL, total tagihan sudah benar, dan username Anda {username}. Jika sudah benar, masukkan PIN Anda > OK."/>
+    </RelativeLayout>
+</RelativeLayout>

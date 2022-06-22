@@ -12,9 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-<<<<<<< HEAD
-rootProject.name = "Joki Online"
-=======
 rootProject.name = "JOKOL"
->>>>>>> homepage
 include ':app'
