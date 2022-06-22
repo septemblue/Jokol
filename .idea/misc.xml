@@ -8,14 +8,12 @@
         <entry key="..\:/JOKOL/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1895" />
         <entry key="..\:/JOKOL/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1895" />
         <entry key="..\:/JOKOL/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.1895" />
-        <entry key="..\:/JOKOL/app/src/main/res/drawable/metodepembayaran.xml" value="0.142" />
         <entry key="..\:/JOKOL/app/src/main/res/drawable/search_layout.xml" value="0.189" />
-        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_jadi_penjoki.xml" value="0.12040133779264214" />
         <entry key="..\:/JOKOL/app/src/main/res/layout/activity_login.xml" value="0.16304347826086957" />
         <entry key="..\:/JOKOL/app/src/main/res/layout/activity_main.xml" value="0.1518987341772152" />
-        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_metode_pembayaran.xml" value="0.25" />
-        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_profile.xml" value="0.17733990147783252" />
-        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_register.xml" value="0.1518987341772152" />
+        <entry key="..\:/JOKOL/app/src/main/res/layout/activity_register.xml" value="0.15" />
+        <entry key="..\:/Users/Maevlava/Desktop/Jokol/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Maevlava/Desktop/Jokol/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
