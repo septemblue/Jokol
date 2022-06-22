@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@id/registerPassword"
         android:hint="Phone number"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ubahData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Ubah data" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/hapusAkun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,40 +131,13 @@
         android:text="Hapus akun" />
 
 
-    <RelativeLayout
-        android:id="@+id/bottomNavbar"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/nav"
         android:background="#e4f7cd"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/homeBtn"
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:clickable="true"
-            android:background="@drawable/ic_baseline_home_24"
-            android:minWidth="0dp" />
-
-        <TextView
-            android:id="@+id/transactionBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:layout_toLeftOf="@id/profileBtn"
-            android:layout_toRightOf="@id/homeBtn"
-            android:background="@drawable/ic_baseline_shopping_cart_24" />
-
-        <TextView
-            android:id="@+id/profileBtn"
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_baseline_account_circle_24"
-            android:minWidth="0dp" />
-    </RelativeLayout>
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
