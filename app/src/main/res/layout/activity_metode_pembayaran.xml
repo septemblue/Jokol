@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,61 +12,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pilih metode pembayaran"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textStyle="bold"
         android:textSize="30dp"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gopayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pilihMetode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:paddingStart="10dp"
+        android:text="Gopay" />
 
-    <TextView
-        android:id="@+id/gopay"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:drawableStart="@drawable/gopay"
-        android:text="GOPAY"
-        android:padding="20dp"
-        android:background="@drawable/metodepembayaran"
-        app:layout_constraintTop_toBottomOf="@id/pilihMetode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ovoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OVO"
+        android:background="@drawable/button"
+        android:paddingStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/gopayBtn"
+        android:layout_centerHorizontal="true"/>
 
-    <RelativeLayout
-        android:id="@+id/bottomNavbar"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/nav"
         android:background="#e4f7cd"
-        android:orientation="horizontal">
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"/>
 
-        <TextView
-            android:id="@+id/homeBtn"
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:clickable="true"
-            android:background="@drawable/ic_baseline_home_24"
-            android:minWidth="0dp" />
-
-        <TextView
-            android:id="@+id/transactionBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:layout_toLeftOf="@id/profileBtn"
-            android:layout_toRightOf="@id/homeBtn"
-            android:background="@drawable/ic_baseline_shopping_cart_24" />
-
-        <TextView
-            android:id="@+id/profileBtn"
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_baseline_account_circle_24"
-            android:minWidth="0dp" />
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,25 +1,22 @@
 package com.example.jokol;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.Toast;
 
 import com.example.jokol.databinding.ActivityShopPageBinding;
 import com.example.jokol.dummy.DummyShopDetail;
-import com.example.jokol.main.MainActivity;
+import com.example.jokol.dummy.DummyTransaction;
 
-import java.util.ArrayList;
-import java.util.List;
+public class TransactionPage extends AppCompatActivity {
 
-public class ShopPage extends AppCompatActivity {
-
-    private RecyclerView shoplistRecycleView;
+    private RecyclerView translistRecycleView;
     private SearchView searchView ;
     ActivityShopPageBinding binding;
     @Override
@@ -28,12 +25,12 @@ public class ShopPage extends AppCompatActivity {
         binding = ActivityShopPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        shoplistRecycleView = findViewById(R.id.rvShop);
-        shoplistRecycleView.setHasFixedSize(true);
-        shoplistRecycleView.setLayoutManager(new GridLayoutManager(this, 2));
+        translistRecycleView = findViewById(R.id.rvTransaction);
+        translistRecycleView.setHasFixedSize(true);
+        translistRecycleView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        ShopAdapter shopAdapter = new ShopAdapter(DummyShopDetail.shopList, ShopPage.this);
-        shoplistRecycleView.setAdapter(shopAdapter);
+        TransactionAdapter transactionAdapter = new ShopAdapter(DummyTransaction.translist, ShopPage.this);
+        translistRecycleView.setAdapter(transactionAdapter);
     }
 
     @Override

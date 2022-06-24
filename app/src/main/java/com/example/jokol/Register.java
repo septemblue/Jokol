@@ -13,11 +13,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Register extends AppCompatActivity {
 
     ActivityRegisterBinding binding;
     FirebaseAuth mAuth;
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://moviedb-a8d94-default-rtdb.firebaseio.com");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +34,6 @@ public class Register extends AppCompatActivity {
 
         binding.registerBtn.setOnClickListener(it -> {
 
-
             String email = binding.registerEmail.getText().toString();
             String password = binding.registerPassword.getText().toString();
             String phone = binding.registerPhone.getText().toString();
@@ -38,16 +43,35 @@ public class Register extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Log.d("User", "createUserWithEmail:success");
-                        FirebaseUser user = mAuth.getCurrentUser();
                     }else {
                         Log.w("User", "createUserWithEmail:failure", task.getException());
-                        Toast.makeText(Register.this, "Authentication failed.",
-                                Toast.LENGTH_SHORT).show();
                     }
                 }
             });
 
+            FirebaseUser user = mAuth.getCurrentUser();
+
+            databaseReference.child("accounts").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.hasChild(user.getUid())) {
+                        Toast.makeText(Register.this, "User has already exist", Toast.LENGTH_SHORT).show();
+                    } else {
+                        databaseReference.child("accounts").child(user.getUid()).child("email").setValue(user.getEmail());
+                        databaseReference.child("accounts").child(user.getUid()).child("password").setValue(password);
+                        databaseReference.child("accounts").child(user.getUid()).child("phone").setValue(phone);
+
+                        Toast.makeText(Register.this, "User Registered  successfully", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         });
+
 
         binding.loginRedirect.setOnClickListener(it -> {
             finish();

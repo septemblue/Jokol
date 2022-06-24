@@ -1,5 +1,7 @@
-package com.example.jokol;
+package com.example.jokol.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,14 +12,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.jokol.R;
+import com.example.jokol.ShopPage;
+
 import java.util.List;
 
 public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder> {
 
     private List<Game> gameList;
-
-    public GameAdapter(List<Game> gameList){
-
+    private Context context;
+    public GameAdapter(List<Game> gameList, Context context ){
+        this.context = context;
         this.gameList = gameList;
     }
     @NonNull
@@ -40,6 +45,10 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
         holder.gamename.setText(gameList.get(position).getOffer());
         holder.gameimage.setImageResource(gameList.get(position).getImage());
+        holder.gameimage.setOnClickListener(it -> {
+            Intent intent = new Intent(context, ShopPage.class);
+            context.startActivity(intent);
+        });
     }
 
     @Override

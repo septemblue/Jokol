@@ -1,5 +1,7 @@
 package com.example.jokol;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +17,11 @@ import java.util.List;
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder> {
 
     private List<Shop> shopList;
+    private Context context;
 
-    public ShopAdapter(List<Shop> shopList){
+    public ShopAdapter(List<Shop> shopList, Context context){
         this.shopList = shopList;
+        this.context = context;
     }
     @NonNull
     @Override
@@ -31,10 +35,16 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     public void onBindViewHolder(@NonNull ShopViewHolder holder, int position) {
         holder.shopImage.setImageResource(shopList.get(position).getImage());
         holder.shopName.setText(shopList.get(position).getShopName());
-        holder.price.setText(shopList.get(position).getPrice());
+        holder.price.setText(String.format("%d", shopList.get(position).getPrice()));
         holder.rateBar.setRating(shopList.get(position).getRateBar());
         holder.rate.setText(shopList.get(position).getRate());
-        holder.user.setText(shopList.get(position).getUser());
+        holder.user.setText(String.format("%d",shopList.get(position).getUser()));
+
+        holder.shopImage.setOnClickListener(it -> {
+            Intent newIntent = new Intent(context, ShopDetail.class);
+            newIntent.putExtra("title", shopList.get(position).getShopName());
+            context.startActivity(newIntent);
+        });
     }
 
     @Override

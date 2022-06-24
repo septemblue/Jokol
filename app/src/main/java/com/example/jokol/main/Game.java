@@ -1,4 +1,4 @@
-package com.example.jokol;
+package com.example.jokol.main;
 
 public class Game {
 
