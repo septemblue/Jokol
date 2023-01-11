@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+=======
+    android:id="@+id/thelayout"
+>>>>>>> developOne
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -44,17 +48,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/paymentSucess"
+<<<<<<< HEAD
             android:text="Rp.1.000.000"
             android:textSize="30dp"
             android:layout_marginTop="100dp"
             android:layout_centerHorizontal="true"
             android:textColor="@color/white" />
+=======
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="Rp.1.000.000"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+>>>>>>> developOne
 
         <ImageView
             android:id="@+id/ilikeit"
             android:layout_width="50dp"
             android:layout_height="50dp"
+<<<<<<< HEAD
             android:src="@drawable/boukenable"
+=======
+            android:src="@drawable/ic_baseline_thumb_up_24"
+>>>>>>> developOne
             android:layout_below="@id/rupiah"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="15dp" />
@@ -63,7 +79,11 @@
             android:id="@+id/idontlikeit"
             android:layout_width="50dp"
             android:layout_height="50dp"
+<<<<<<< HEAD
             android:src="@drawable/not_boukenable"
+=======
+            android:src="@drawable/ic_baseline_thumb_down_24"
+>>>>>>> developOne
             android:layout_below="@id/rupiah"
             android:layout_toRightOf="@id/ilikeit"
             android:layout_marginLeft="50dp"

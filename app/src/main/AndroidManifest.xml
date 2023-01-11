@@ -14,19 +14,34 @@
         android:theme="@style/Theme.JOKOL"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
+=======
+            android:name=".TransactionPage"
+            android:exported="false" />
+        <activity
+            android:name=".Successful_payment"
+            android:exported="false" />
+        <activity
+>>>>>>> developOne
             android:name=".ShopDetail"
             android:exported="false" />
         <activity
             android:name=".ShopPage"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".Successful_payment"
             android:exported="false" />
         <activity
             android:name=".Payment"
             android:exported="false" />
         <activity
+=======
+>>>>>>> developOne
             android:name=".metodePembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
             android:exported="false" />
         <activity
             android:name=".jadiPenjoki"
@@ -36,12 +51,6 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,6 +58,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

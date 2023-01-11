@@ -8,17 +8,42 @@ public class Shop {
     private float rateBar;
     private String rate;
     private int user;
+<<<<<<< HEAD
 
 
     public Shop(int image, String shopName, int price, float rateBar, String rate, int user) {
+=======
+    private String description;
+
+
+    public Shop(int image, String shopName, int price, float rateBar, String rate, int user, String description) {
+>>>>>>> developOne
         this.image = image;
         this.shopName = shopName;
         this.price = price;
         this.rateBar = rateBar;
         this.rate = rate;
         this.user = user;
+<<<<<<< HEAD
     }
 
+=======
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "image=" + image +
+                ", shopName='" + shopName + '\'' +
+                ", price=" + price +
+                ", rateBar=" + rateBar +
+                ", rate='" + rate + '\'' +
+                ", user=" + user +
+                ", description='" + description + '\'' +
+                '}';
+    }
+>>>>>>> developOne
 
     public int getImage() {
         return image;
@@ -67,5 +92,16 @@ public class Shop {
     public void setUser(int user) {
         this.user = user;
     }
+<<<<<<< HEAD
+=======
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+>>>>>>> developOne
 }
 

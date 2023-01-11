@@ -1,5 +1,10 @@
 package com.example.jokol;
 
+<<<<<<< HEAD
+=======
+import android.content.Context;
+import android.content.Intent;
+>>>>>>> developOne
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +20,17 @@ import java.util.List;
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder> {
 
     private List<Shop> shopList;
+<<<<<<< HEAD
 
     public ShopAdapter(List<Shop> shopList){
         this.shopList = shopList;
+=======
+    private Context context;
+
+    public ShopAdapter(List<Shop> shopList, Context context){
+        this.shopList = shopList;
+        this.context = context;
+>>>>>>> developOne
     }
     @NonNull
     @Override
@@ -31,10 +44,23 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     public void onBindViewHolder(@NonNull ShopViewHolder holder, int position) {
         holder.shopImage.setImageResource(shopList.get(position).getImage());
         holder.shopName.setText(shopList.get(position).getShopName());
+<<<<<<< HEAD
         holder.price.setText(shopList.get(position).getPrice());
         holder.rateBar.setRating(shopList.get(position).getRateBar());
         holder.rate.setText(shopList.get(position).getRate());
         holder.user.setText(shopList.get(position).getUser());
+=======
+        holder.price.setText(String.format("%d", shopList.get(position).getPrice()));
+        holder.rateBar.setRating(shopList.get(position).getRateBar());
+        holder.rate.setText(shopList.get(position).getRate());
+        holder.user.setText(String.format("%d",shopList.get(position).getUser()));
+
+        holder.shopImage.setOnClickListener(it -> {
+            Intent newIntent = new Intent(context, ShopDetail.class);
+            newIntent.putExtra("title", shopList.get(position).getShopName());
+            context.startActivity(newIntent);
+        });
+>>>>>>> developOne
     }
 
     @Override

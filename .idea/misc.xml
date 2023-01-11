@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Chris/JOKOL/app/src/main/res/drawable/ic_baseline_smartphone_24.xml" value="0.276" />
         <entry key="..\:/Chris/JOKOL/app/src/main/res/layout/activity_main.xml" value="0.3770491803278688" />
         <entry key="..\:/Chris/JOKOL/app/src/main/res/layout/activity_shop_detail.xml" value="0.2015625" />
@@ -28,10 +29,27 @@
         <entry key="..\:/JOKOL/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/JOKOL/app/src/main/res/layout/activity_successful_payment.xml" value="0.2" />
         <entry key="..\:/JOKOL/app/src/main/res/menu/nav.xml" value="0.22083333333333333" />
+=======
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_jadi_penjoki.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_metode_pembayaran.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_payment.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_profile.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_register.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_shop_page.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/activity_transaction.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/game_item.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/shop_item.xml" value="0.38697916666666665" />
+        <entry key="..\:/Chris/!Android Studio/Jokol/app/src/main/res/layout/transaction_item.xml" value="0.3859375" />
+        <entry key="..\:/Users/Maevlava/Downloads/Jokol/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Maevlava/Downloads/Jokol/app/src/main/res/layout/activity_shop_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Maevlava/Downloads/Jokol/app/src/main/res/layout/activity_successful_payment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Maevlava/Downloads/Jokol/app/src/main/res/layout/activity_transaction_page.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Maevlava/Downloads/Jokol/app/src/main/res/layout/transaction_item.xml" value="0.24954710144927536" />
+>>>>>>> developOne
       </map>
     </option>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

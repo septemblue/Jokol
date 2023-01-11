@@ -2,11 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#D69B9B"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#edcdc0"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
+<<<<<<< HEAD
 <!--    <LinearLayout-->
 <!--        android:id="@+id/menuAtas"-->
 <!--        android:layout_width="match_parent"-->
@@ -44,16 +45,33 @@
         android:layout_marginBottom="20dp"
         android:background="#f0e8d5"
         android:orientation="vertical">
+=======
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="Trending game"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <LinearLayout
+                android:id="@+id/trendBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+>>>>>>> developOne
+
+                <TextView
+                    android:id="@+id/trendTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trending Game"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+<<<<<<< HEAD
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvGame"
             android:layout_width="match_parent"
@@ -87,48 +105,184 @@
                 android:background="@drawable/ic_baseline_phone_android_24"/>
 
             <TextView
+=======
+            <ImageView
+                android:id="@+id/trendBarBox"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/trendBar"
+                android:src="#FFF6EC" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGame"
+>>>>>>> developOne
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Mobile Games"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center_horizontal"/>
+                android:layout_below="@+id/trendBar">
+                <!--            tools:listitem="@layout/game_item">-->
+            </androidx.recyclerview.widget.RecyclerView>
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/platformBox"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@+id/trendBarBox"
+                android:layout_marginTop="40dp"
+                android:src="#FFFFF5" />
 
-        <LinearLayout
-            android:layout_width="185dp"
-            android:layout_height="170dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/pcGames"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/ic_baseline_computer_24"/>
-
-            <TextView
+            <!--         Platform-->
+            <LinearLayout
+                android:id="@+id/platform"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Pc Games"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center_horizontal"/>
-        </LinearLayout>
-    </LinearLayout>
+                android:layout_below="@+id/trendBarBox"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@id/other"
-        android:padding="20dp"
-        android:src="@drawable/ic_launcher_background"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="40dp"
+                    android:weightSum="3">
 
+<<<<<<< HEAD
     <com.google.android.material.bottomnavigation.BottomNavigationView
+=======
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_baseline_computer_24" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="PC"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_baseline_smartphone_24" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Smartphone"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_baseline_videogame_asset_24" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Console"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="40dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_baseline_computer_24" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="PC"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_baseline_smartphone_24" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Smartphone"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_baseline_videogame_asset_24" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Console"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/valorant"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/platformBox"
+                android:src="@drawable/valorant_logo_0"/>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNav"
+>>>>>>> developOne
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -136,7 +290,13 @@
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:menu="@menu/nav" />
+<<<<<<< HEAD
 
 </RelativeLayout>
 
 
+=======
+</RelativeLayout>
+
+
+>>>>>>> developOne
