@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.jokol.Login;
 import com.example.jokol.Profile;
 import com.example.jokol.R;
+import com.example.jokol.TransactionPage;
 import com.example.jokol.databinding.ActivityMainBinding;
 import com.example.jokol.dummy.DummyGame;
 import com.google.android.material.snackbar.Snackbar;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, Profile.class));
                 return true;
             } else if (it.getItemId() == R.id.ic_transaction) {
-                Toast.makeText(MainActivity.this, "Under development", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, TransactionPage.class));
                 return true;
             }
             return false;

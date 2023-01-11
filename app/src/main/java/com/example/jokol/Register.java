@@ -38,36 +38,32 @@ public class Register extends AppCompatActivity {
             String password = binding.registerPassword.getText().toString();
             String phone = binding.registerPhone.getText().toString();
 
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        Log.d("User", "createUserWithEmail:success");
-                    }else {
-                        Log.w("User", "createUserWithEmail:failure", task.getException());
-                    }
-                }
-            });
 
-            FirebaseUser user = mAuth.getCurrentUser();
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
+                if (task.isSuccessful()) {
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    databaseReference.child("accounts").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.hasChild(user.getUid())) {
+                                Toast.makeText(Register.this, "User has already exist", Toast.LENGTH_SHORT).show();
+                            } else {
+                                databaseReference.child("accounts").child(user.getUid()).child("email").setValue(user.getEmail());
+                                databaseReference.child("accounts").child(user.getUid()).child("password").setValue(password);
+                                databaseReference.child("accounts").child(user.getUid()).child("phone").setValue(phone);
 
-            databaseReference.child("accounts").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if (snapshot.hasChild(user.getUid())) {
-                        Toast.makeText(Register.this, "User has already exist", Toast.LENGTH_SHORT).show();
-                    } else {
-                        databaseReference.child("accounts").child(user.getUid()).child("email").setValue(user.getEmail());
-                        databaseReference.child("accounts").child(user.getUid()).child("password").setValue(password);
-                        databaseReference.child("accounts").child(user.getUid()).child("phone").setValue(phone);
+                                Toast.makeText(Register.this, "User Registered  successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        }
 
-                        Toast.makeText(Register.this, "User Registered  successfully", Toast.LENGTH_SHORT).show();
-                    }
-                }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
+                        }
+                    });
+                    Log.d("User", "createUserWithEmail:success");
+                }else {
+                    Log.w("User", "createUserWithEmail:failure", task.getException());
                 }
             });
         });

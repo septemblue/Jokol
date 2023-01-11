@@ -8,6 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.jokol.databinding.ActivityShopDetailBinding;
+import com.example.jokol.dummy.DummyTransaction;
+import com.example.jokol.dummy.TransactionModel;
+
 public class ShopDetail extends AppCompatActivity {
 
     ActivityShopDetailBinding binding;
@@ -42,6 +46,7 @@ public class ShopDetail extends AppCompatActivity {
 
         binding.checkoutBtn.setOnClickListener(it -> {
             Intent intent = new Intent(ShopDetail.this, TransactionPage.class);
+            DummyTransaction.checkoutTransaction.add( new TransactionModel(shopDetail, binding.numPick.getValue()));
             intent.putExtra("title", shopDetail.getShopName());
             intent.putExtra("quantity", binding.numPick.getValue());
             startActivity(intent);

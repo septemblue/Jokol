@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.jokol.databinding.ActivityProfileBinding;
+import com.example.jokol.main.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,7 +29,6 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -69,15 +70,29 @@ public class Profile extends AppCompatActivity {
 
                 }
             });
+            Toast.makeText(this, "DATA BERHASIL DIUBAH", Toast.LENGTH_SHORT).show();
+        });
+
+        binding.btmNav.setOnItemSelectedListener(it -> {
+            if (it.getItemId() == R.id.ic_transaction) {
+                startActivity(new Intent(Profile.this, TransactionPage.class));
+                return true;
+            } else if (it.getItemId() == R.id.ic_home) {
+                startActivity(new Intent(Profile.this, MainActivity.class));
+                return true;
+            }
+            return false;
         });
 
         binding.hapusAkun.setOnClickListener(it -> {
             databaseReference.child("accounts").child(user.getUid()).removeValue();
             user.delete();
+            Toast.makeText(this, "DATA BERHASIL DIHAPUS", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Profile.this, Login.class));
         });
 
         binding.keluar.setOnClickListener(it -> {
+            Toast.makeText(this, "TERIMAKASIH!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Profile.this, Login.class));
         });
 

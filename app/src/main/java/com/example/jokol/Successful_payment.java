@@ -18,6 +18,15 @@ public class Successful_payment extends AppCompatActivity {
         binding = ActivitySuccessfulPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        Bundle extras = null;
+
+        if (savedInstanceState == null) {
+            extras = getIntent().getExtras();
+        }
+
+        int totalharga = extras.getInt("totalharga");
+        binding.rupiah.setText(String.format("%d", totalharga));
         binding.thelayout.setOnClickListener(it-> {
             startActivity(new Intent(Successful_payment.this, MainActivity.class));
         });

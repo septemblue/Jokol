@@ -13,6 +13,7 @@ public class DummyTransaction {
         add(new Transaction(R.drawable.valorant_logo, "Lion Team", "5", "75000"));
     }};
 
+    public static ArrayList<TransactionModel> checkoutTransaction = new ArrayList<>();
 //    public static Shop getTheShop(String title) {
 //        Shop theShop = null;
 //        for (Shop shop :

@@ -3,6 +3,11 @@ package com.example.jokol.dummy;
 import com.example.jokol.Shop;
 
 public class TransactionModel {
-    Shop shop;
-    int quantity;
+    public Shop shop;
+    public int quantity;
+
+    public TransactionModel(Shop shop, int quantity) {
+        this.shop = shop;
+        this.quantity = quantity;
+    }
 }

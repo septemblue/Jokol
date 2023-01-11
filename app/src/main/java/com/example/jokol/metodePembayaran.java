@@ -24,19 +24,17 @@ public class metodePembayaran extends AppCompatActivity {
             extras = getIntent().getExtras();
         }
 
-        String title = extras.getString("title");
-        int quantity = extras.getInt("quantity");
+        int totalHarga = extras.getInt("totalharga");
 
         binding.gopayBtn.setOnClickListener(it -> {
             Intent newIntent = new Intent(metodePembayaran.this, Payment.class);
-            newIntent.putExtra("title", title);
-            newIntent.putExtra("quantity", quantity);
+            newIntent.putExtra("totalharga", totalHarga);
             startActivity(newIntent);
         });
 
         binding.ovoBtn.setOnClickListener(it -> {
             Intent newIntent = new Intent(metodePembayaran.this, Payment.class);
-            newIntent.putExtra("title", title);
+            newIntent.putExtra("totalharga", totalHarga);
             startActivity(newIntent);
         });
     }

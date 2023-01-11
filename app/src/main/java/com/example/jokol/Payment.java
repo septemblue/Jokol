@@ -24,15 +24,12 @@ public class Payment extends AppCompatActivity {
             extras = getIntent().getExtras();
         }
 
-        String title = extras.getString("title");
-        int quantity = extras.getInt("quantity");
+        int totalharga = extras.getInt("totalharga");
 
-        Shop shop = DummyShopDetail.getTheShop(title);
-
-        binding.jumlahHarga.setText(String.format("%d", shop.getPrice() * quantity));
+        binding.jumlahHarga.setText(String.format("%d", totalharga));
 
         binding.klik.setOnClickListener(it -> {
-            startActivity(new Intent(Payment.this, Successful_payment.class));
+            startActivity(new Intent(Payment.this, Successful_payment.class).putExtra("totalharga", totalharga));
         });
     }
 }
